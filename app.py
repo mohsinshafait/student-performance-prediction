@@ -368,23 +368,23 @@ if st.button("Predict Performance", use_container_width=True):
 
 # add a better message
 
-if prediction == 1:
-    st.success("🎉 This student is likely to have **Satisfactory Academic Performance**.")
+    if prediction == 1:
+        st.success("🎉 This student is likely to have **Satisfactory Academic Performance**.")
 
-    st.info(f"**Prediction Confidence:** {confidence:.2f}%")
-    st.progress(confidence / 100)
-    st.write("""
-The model predicts that the student has a good chance of achieving satisfactory academic performance based on the information provided.
-""")
+        st.info(f"**Prediction Confidence:** {confidence:.2f}%")
+        st.progress(confidence / 100)
+        st.write("""
+    The model predicts that the student has a good chance of achieving satisfactory academic performance based on the information provided.
+    """)
 
-else:
-    st.error("⚠️ This student is likely to have **Unsatisfactory Academic Performance**.")
+    else:
+        st.error("⚠️ This student is likely to have **Unsatisfactory Academic Performance**.")
 
-    st.info(f"**Prediction Confidence:** {confidence:.2f}%",)
-    st.progress(confidence / 100)
-    st.write("""
-The model predicts that the student may struggle academically. Consider reviewing factors such as study habits, attendance, and academic support.
-""")
+        st.info(f"**Prediction Confidence:** {confidence:.2f}%",)
+        st.progress(confidence / 100)
+        st.write("""
+    The model predicts that the student may struggle academically. Consider reviewing factors such as study habits, attendance, and academic support.
+    """)
 
 
 # Add disclaimer
